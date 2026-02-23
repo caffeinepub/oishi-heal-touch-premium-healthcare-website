@@ -17,6 +17,7 @@ import {
   Microscope,
   Baby,
   Eye,
+  Sparkles,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -134,6 +135,42 @@ export default function HomePage() {
                 <Link to="/doctors">View Our Doctors</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-white mobile-spacing-lg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto observe-scroll">
+            <Card className="card-premium relative shadow-large border-0 overflow-hidden">
+              <div className="card-border-glow"></div>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
+              <CardHeader className="text-center pb-4 relative z-10">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center shadow-soft">
+                  <Sparkles className="w-8 h-8 text-primary card-icon" />
+                </div>
+                <CardTitle className="text-3xl md:text-4xl font-bold mb-4">About Oishi Heal Touch</CardTitle>
+                <CardDescription className="text-lg text-muted-foreground">
+                  Your Trusted Healthcare Partner in Beleghata, Kolkata
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center relative z-10 px-6 md:px-12 pb-10">
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+                  At Oishi Heal Touch, we are committed to providing comprehensive, compassionate healthcare services to our community. With a team of experienced specialists and state-of-the-art facilities, we offer expert medical care across multiple specialties including dermatology, orthopedics, gynecology, pediatrics, and more.
+                </p>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
+                  As a trusted Pathkind Lab partner, we ensure accurate diagnostics and preventive health packages, all under one roof. Your health and well-being are our top priorities.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="rounded-full border-2 hover:bg-secondary hover:scale-105 transition-all duration-300 px-8 py-6 text-base mobile-touch-target"
+                >
+                  <Link to="/about">Learn More About Us</Link>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

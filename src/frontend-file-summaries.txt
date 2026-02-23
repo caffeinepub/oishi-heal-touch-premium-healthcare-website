@@ -1,7 +1,7 @@
 {
   "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining all routes (home, doctors, about, lab tests, why us, testimonials, contact, blog) with Layout wrapper.",
   "frontend/src/components/Layout.tsx": "Shared layout with glassmorphism header, premium gradient logo, rounded pill navigation, sticky mobile CTA with glass effect, and footer with brand attribution and dynamic year.",
-  "frontend/src/pages/HomePage.tsx": "Home page with animated hero section featuring floating shapes, gradient pill CTAs, premium service cards with hover lift and gradient border glow, glassmorphism lab services section, scroll reveal animations, and enhanced mobile spacing.",
+  "frontend/src/pages/HomePage.tsx": "Home page with animated hero section, new About Us card section with glassmorphism styling and scroll-reveal animation positioned between hero and services, premium service cards with hover effects, lab services section, why choose us highlights, testimonials, and CTA section with gradient backgrounds and floating shapes.",
   "frontend/src/pages/DoctorsPage.tsx": "Doctors listing page with premium card design, hover lift effects, gradient border glow, rounded pill booking buttons, scroll reveal animations, and enhanced mobile touch targets.",
   "frontend/src/pages/AboutPage.tsx": "About page with premium mission/vision cards featuring gradient icon backgrounds, hover lift effects, gradient border glow, scroll reveal animations, and enhanced typography with increased spacing.",
   "frontend/src/pages/LabTestsPage.tsx": "Lab tests page with premium offer cards, accordion with rounded design and hover effects, gradient pill CTAs, scroll reveal animations, and enhanced mobile spacing with touch-friendly buttons.",
