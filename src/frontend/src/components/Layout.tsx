@@ -37,14 +37,12 @@ export default function Layout() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-premium-sm group-hover:shadow-premium-md transition-all duration-300">
-                <Heart className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-foreground tracking-tight">Oishi Heal Touch</h1>
-                <p className="text-xs text-muted-foreground">Premium Healthcare</p>
-              </div>
+            <Link to="/" className="flex items-center group">
+              <img 
+                src="/assets/3a6f56c9-6623-412d-8fe2-58573e18b61f.png" 
+                alt="Oishi Heal Touch Logo" 
+                className="h-[60px] md:h-[65px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              />
             </Link>
 
             <nav className="hidden lg:flex items-center space-x-1">
@@ -123,14 +121,12 @@ export default function Layout() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-premium-sm">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-foreground">Oishi Heal Touch</h3>
-                  <p className="text-xs text-muted-foreground">Premium Healthcare</p>
-                </div>
+              <div className="flex items-center mb-4">
+                <img 
+                  src="/assets/3a6f56c9-6623-412d-8fe2-58573e18b61f.png" 
+                  alt="Oishi Heal Touch Logo" 
+                  className="h-[50px] w-auto object-contain"
+                />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Your trusted healthcare partner in Kolkata, providing compassionate and expert medical care.
