@@ -1,24 +1,37 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Website with premium services section and custom header logo",
-  "architectural_notes": [
-    "Header logo uses uploaded image asset, responsive (60-70px desktop, 45-55px mobile)",
-    "Logo optimized as WebP format, maintains aspect ratio without distortion",
-    "Logo links to homepage (/), applied sitewide with favicon update"
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "existing_features": [],
+  "existing_features": [
+    {
+      "id": "feature-add-subtle-professional-medical-themed-background-animations-to-the-header-section-that-complement-the-existing-oishi-heal-touch-branding-without-overwhelming-the-content",
+      "title": "Add subtle, professional medical-themed background animations to the header section that complement the existing 'Oishi Heal Touch' branding without overwhelming the content",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-header-animations-integrate-seamlessly-with-the-existing-sticky-header-design-and-glassmorphism-effects-already-present-in-the-application",
+      "title": "Ensure the header animations integrate seamlessly with the existing sticky header design and glassmorphism effects already present in the application",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Replace header logo with uploaded image, responsive sizing, optimize for web",
+      "summary": "Add professional medical themed background animations in header section",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Untitled request",
+  "projectName": "Add professional medical-themed background animations to header",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

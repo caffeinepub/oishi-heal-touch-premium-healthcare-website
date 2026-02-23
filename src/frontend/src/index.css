@@ -269,6 +269,89 @@
         width: 300px;
         height: 300px;
     }
+
+    /* Medical-themed header animations */
+    .medical-pulse-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, oklch(var(--primary) / 0.15) 0%, transparent 70%);
+        will-change: transform, opacity;
+    }
+
+    .medical-pulse-1 {
+        width: 200px;
+        height: 200px;
+        top: -80px;
+        left: 10%;
+        animation: medical-pulse 4s ease-in-out infinite;
+    }
+
+    .medical-pulse-2 {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+        right: 15%;
+        animation: medical-pulse 5s ease-in-out infinite 1s;
+    }
+
+    .medical-pulse-3 {
+        width: 180px;
+        height: 180px;
+        top: -60px;
+        left: 50%;
+        animation: medical-pulse 4.5s ease-in-out infinite 2s;
+    }
+
+    .medical-flow-line {
+        position: absolute;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, oklch(var(--accent) / 0.2), transparent);
+        will-change: transform, opacity;
+    }
+
+    .medical-flow-1 {
+        width: 300px;
+        top: 30%;
+        left: -300px;
+        animation: medical-flow-horizontal 8s linear infinite;
+    }
+
+    .medical-flow-2 {
+        width: 250px;
+        top: 60%;
+        left: -250px;
+        animation: medical-flow-horizontal 10s linear infinite 2s;
+    }
+
+    .medical-flow-3 {
+        width: 200px;
+        top: 45%;
+        left: -200px;
+        animation: medical-flow-horizontal 9s linear infinite 4s;
+    }
+
+    .medical-heartbeat-wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            transparent 20%,
+            oklch(var(--primary) / 0.3) 25%,
+            oklch(var(--primary) / 0.3) 30%,
+            transparent 35%,
+            transparent 45%,
+            oklch(var(--accent) / 0.3) 50%,
+            oklch(var(--accent) / 0.3) 55%,
+            transparent 60%,
+            transparent 100%
+        );
+        background-size: 200% 100%;
+        animation: medical-heartbeat 6s linear infinite;
+        will-change: background-position;
+    }
 }
 
 @keyframes scroll-reveal-fade {
@@ -323,6 +406,54 @@
     }
 }
 
+/* Medical-themed animation keyframes */
+@keyframes medical-pulse {
+    0%, 100% {
+        transform: scale(1) translateY(0);
+        opacity: 0.15;
+    }
+    50% {
+        transform: scale(1.3) translateY(-10px);
+        opacity: 0.25;
+    }
+}
+
+@keyframes medical-flow-horizontal {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateX(calc(100vw + 300px));
+        opacity: 0;
+    }
+}
+
+@keyframes medical-heartbeat {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .medical-pulse-circle,
+    .medical-flow-line,
+    .medical-heartbeat-wave {
+        animation: none;
+        opacity: 0.05;
+    }
+}
+
 /* Mobile-specific enhancements */
 @media (max-width: 768px) {
     .mobile-spacing {
@@ -347,38 +478,17 @@
         right: 0;
         z-index: 40;
         padding: 1.25rem;
-        background: oklch(var(--background) / 0.95);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        box-shadow: 0 -8px 32px oklch(var(--foreground) / 0.12);
-        border-top: 1px solid oklch(var(--foreground) / 0.08);
+        background: linear-gradient(to top, oklch(var(--background)) 80%, transparent);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
-}
 
-/* Smooth transitions for all interactive elements */
-a, button, .interactive {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    /* Reduce animation intensity on mobile */
+    .medical-pulse-circle {
+        opacity: 0.08;
+    }
 
-a:hover, button:hover, .interactive:hover {
-    opacity: 0.95;
-}
-
-/* Enhanced input focus states */
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px oklch(var(--primary) / 0.15);
-}
-
-/* Subtle gradient overlays */
-.gradient-overlay {
-    position: relative;
-}
-
-.gradient-overlay::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, oklch(var(--primary) / 0.03), oklch(var(--accent) / 0.03));
-    pointer-events: none;
+    .medical-flow-line {
+        display: none;
+    }
 }

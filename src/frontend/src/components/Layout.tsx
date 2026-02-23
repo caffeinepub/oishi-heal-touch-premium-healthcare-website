@@ -33,16 +33,35 @@ export default function Layout() {
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled ? 'glass-effect-strong shadow-soft' : 'bg-white/95'
-        }`}
+        } relative overflow-hidden`}
       >
-        <div className="container mx-auto px-4">
+        {/* Medical-themed background animations */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Pulse circles - heartbeat effect */}
+          <div className="medical-pulse-circle medical-pulse-1"></div>
+          <div className="medical-pulse-circle medical-pulse-2"></div>
+          <div className="medical-pulse-circle medical-pulse-3"></div>
+          
+          {/* Flowing medical lines */}
+          <div className="medical-flow-line medical-flow-1"></div>
+          <div className="medical-flow-line medical-flow-2"></div>
+          <div className="medical-flow-line medical-flow-3"></div>
+          
+          {/* Heartbeat wave */}
+          <div className="medical-heartbeat-wave"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center group">
+            <Link to="/" className="flex items-center gap-3 group whitespace-nowrap">
               <img 
                 src="/assets/3a6f56c9-6623-412d-8fe2-58573e18b61f.png" 
                 alt="Oishi Heal Touch Logo" 
-                className="h-[60px] md:h-[65px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                className="h-[50px] md:h-[60px] w-auto object-contain transition-all duration-300 group-hover:scale-105 flex-shrink-0"
               />
+              <span className="text-lg md:text-xl font-semibold text-foreground tracking-tight transition-all duration-300 group-hover:text-primary">
+                Oishi Heal Touch
+              </span>
             </Link>
 
             <nav className="hidden lg:flex items-center space-x-1">
@@ -121,12 +140,15 @@ export default function Layout() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <img 
                   src="/assets/3a6f56c9-6623-412d-8fe2-58573e18b61f.png" 
                   alt="Oishi Heal Touch Logo" 
-                  className="h-[50px] w-auto object-contain"
+                  className="h-[50px] w-auto object-contain flex-shrink-0"
                 />
+                <span className="text-lg font-semibold text-foreground tracking-tight">
+                  Oishi Heal Touch
+                </span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Your trusted healthcare partner in Kolkata, providing compassionate and expert medical care.

@@ -1,10 +1,57 @@
 {
   "kind": "build_request",
-  "title": "Untitled request",
+  "title": "Add professional medical-themed background animations to header",
   "priority": "normal",
-  "requirements": [],
-  "constraints": [],
-  "nonGoals": [],
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add subtle, professional medical-themed background animations to the header section that complement the existing 'Oishi Heal Touch' branding without overwhelming the content",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "can you add some proffessional medical themed background animations in the header section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background animations are visible in the header section containing the logo and 'Oishi Heal Touch' text",
+        "Animations use medical/healthcare theming (e.g., subtle pulse effects, flowing lines suggesting heartbeat or medical imagery)",
+        "Animations are professional and subtle, not distracting from header content",
+        "Animations work smoothly on both desktop and mobile viewports",
+        "Performance remains smooth with no janky animations"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Ensure the header animations integrate seamlessly with the existing sticky header design and glassmorphism effects already present in the application",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Animations do not interfere with sticky header behavior",
+        "Animations complement existing glassmorphism and premium design styles",
+        "Header text and logo remain clearly readable over the animated background",
+        "Animations maintain consistent visual coherence with the OKLCH color system and brand palette"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the backend/main.mo file",
+    "Preserve the existing header structure with logo and 'Oishi Heal Touch' text",
+    "Maintain mobile responsiveness and sticky header functionality",
+    "Keep animations subtle and professional to maintain healthcare credibility"
+  ],
+  "nonGoals": [
+    "Adding animations to other page sections beyond the header",
+    "Changing the header layout or navigation structure",
+    "Modifying the logo or branding text styling",
+    "Adding interactive animations that require user input"
+  ],
   "imageRequirements": {
     "required": [],
     "edits": []

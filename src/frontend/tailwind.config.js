@@ -144,6 +144,20 @@ export default {
                 'glow-pulse': {
                     '0%, 100%': { boxShadow: '0 0 20px oklch(var(--primary) / 0.3)' },
                     '50%': { boxShadow: '0 0 40px oklch(var(--primary) / 0.6)' }
+                },
+                'medical-pulse': {
+                    '0%, 100%': { transform: 'scale(1) translateY(0)', opacity: '0.15' },
+                    '50%': { transform: 'scale(1.3) translateY(-10px)', opacity: '0.25' }
+                },
+                'medical-flow-horizontal': {
+                    '0%': { transform: 'translateX(0)', opacity: '0' },
+                    '10%': { opacity: '0.3' },
+                    '90%': { opacity: '0.3' },
+                    '100%': { transform: 'translateX(calc(100vw + 300px))', opacity: '0' }
+                },
+                'medical-heartbeat': {
+                    '0%': { backgroundPosition: '0% 0%' },
+                    '100%': { backgroundPosition: '200% 0%' }
                 }
             },
             animation: {
@@ -154,7 +168,10 @@ export default {
                 'slide-up': 'slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
                 'float': 'float 25s ease-in-out infinite',
                 'icon-bounce': 'icon-bounce 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                'glow-pulse': 'glow-pulse 2.5s ease-in-out infinite'
+                'glow-pulse': 'glow-pulse 2.5s ease-in-out infinite',
+                'medical-pulse': 'medical-pulse 4s ease-in-out infinite',
+                'medical-flow': 'medical-flow-horizontal 8s linear infinite',
+                'medical-heartbeat': 'medical-heartbeat 6s linear infinite'
             }
         }
     },
