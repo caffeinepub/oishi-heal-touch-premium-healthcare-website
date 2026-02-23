@@ -1,24 +1,128 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add animated About Us section to home page",
+  "title": "Redesign Services Section with Premium Service Cards",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Add an animated 'About Us' card section on the home page positioned below the header section and above the 'Our Services' section",
+      "summary": "Restructure the Services section on the homepage with a centered heading 'Our Services' followed by a short 1-line supporting text below it",
       "acceptanceCriteria": [
-        "About Us section appears on the home page between the hero/header and the services section",
-        "Section uses an animated card component with scroll-reveal animations consistent with existing page patterns",
-        "Card styling matches the premium glassmorphism design system already in use (glass effects, gradients, shadows)",
-        "Animation triggers on scroll using IntersectionObserver pattern like other sections",
-        "Section is compact and concise as specified by 'small' in the request",
-        "Content introduces Oishi Heal Touch clinic with brief overview appropriate for homepage placement"
+        "Services section has centered 'Our Services' heading",
+        "A descriptive 1-line subtitle appears below the heading",
+        "Heading and subtitle maintain proper spacing hierarchy"
       ],
       "file_operations": [
         {
           "path": "frontend/src/pages/HomePage.tsx",
           "operation": "modify",
-          "description": "Insert a new About Us section between the hero section and the services section. Add a compact card component with glassmorphism styling (glass-card class) containing a brief introduction to Oishi Heal Touch clinic. Implement scroll-reveal animation using IntersectionObserver pattern consistent with existing sections. Use premium design elements including gradient accents, soft shadows, and the established OKLCH color system. Ensure the section is visually distinct but harmonious with surrounding sections, maintaining the page's premium aesthetic flow."
+          "description": "Update the Services section to add a centered 'Our Services' heading with a descriptive subtitle below it. Ensure proper spacing hierarchy between heading and subtitle using Tailwind spacing utilities."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Replace existing small icon boxes with large premium service cards, where each card displays: service title (bold, prominent), 2-3 line meaningful description, primary CTA button (Book Appointment / Learn More), optional small icon above title, and proper padding and spacing",
+      "acceptanceCriteria": [
+        "Each service is displayed as a large rectangular card",
+        "Service title is bold and prominently displayed",
+        "Each card includes a 2-3 line description with softer text color",
+        "Each card has a primary CTA button with relevant text (Book Now, Schedule Consultation, or Learn More)",
+        "Optional icon appears above the title when appropriate",
+        "Cards have generous internal padding and spacing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Replace the existing service icon boxes with large premium card components. Each card should include: optional small icon at top, bold prominent service title, 2-3 line description with muted text color, primary CTA button with appropriate action text (Book Appointment/Learn More), and generous padding (p-8 or similar). Maintain existing service data but restructure the markup for card-based layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Style service cards with rounded corners (16-20px border radius), soft shadow depth, light background or subtle section contrast, clean premium spacing, and typography hierarchy with large bold titles, softer colored descriptions, and clearly visible CTAs",
+      "acceptanceCriteria": [
+        "Cards have 16-20px rounded corners",
+        "Cards have soft shadow depth for premium feel",
+        "Cards use light backgrounds with subtle contrast",
+        "Typography follows clear hierarchy with large bold titles and softer descriptions",
+        "CTA buttons are prominently visible and styled"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Apply premium styling to service cards: use rounded-2xl or rounded-3xl (16-24px) for border radius, add shadow-soft or shadow-premium class for depth, set light background with bg-white or bg-background, establish typography hierarchy with text-2xl font-bold for titles and text-muted-foreground for descriptions, and ensure CTA buttons use existing premium button styles from index.css."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement desktop layout with 2 service cards per row in a spacious grid with equal height cards, and add hover effects including slight lift, shadow increase, and CTA button highlight",
+      "acceptanceCriteria": [
+        "Desktop displays exactly 2 cards per row",
+        "Grid layout is spacious with appropriate gaps",
+        "All cards in the same row have equal height",
+        "On hover, cards lift slightly upward",
+        "On hover, card shadow increases in depth",
+        "On hover, CTA button shows highlight effect"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Implement desktop grid layout using grid grid-cols-1 lg:grid-cols-2 with gap-8 or gap-12 for spacious layout. Cards should have equal height using grid auto-rows or h-full. Add hover effects with transition-all duration-300 hover:-translate-y-2 hover:shadow-premium classes. Include hover state for CTA buttons with scale or glow effect."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement mobile layout with single column stacked cards at full width, large touch-friendly CTA buttons, and clean vertical spacing",
+      "acceptanceCriteria": [
+        "Mobile view displays cards in single column",
+        "Cards span full width on mobile",
+        "CTA buttons are large and touch-friendly (minimum 44px height)",
+        "Vertical spacing between cards is clean and consistent"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure mobile layout uses single column with grid-cols-1 on mobile breakpoint, cards span w-full, and vertical spacing uses gap-6 or gap-8. CTA buttons should have py-3 px-6 or larger for minimum 44px touch target height. Apply consistent spacing between stacked cards."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add micro interactions including smooth scroll reveal animation for service cards, hover lift animation, button subtle glow effect, and 0.3s smooth transitions throughout",
+      "acceptanceCriteria": [
+        "Service cards animate into view on scroll",
+        "Cards have smooth lift animation on hover",
+        "CTA buttons show subtle glow effect on hover",
+        "All transitions use 0.3s duration for smooth feel"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add scroll-reveal animation to service cards using the existing IntersectionObserver pattern from other pages (opacity-0 translate-y-8 to opacity-100 translate-y-0). Apply transition-all duration-300 to cards for smooth hover lift. Add hover:shadow-glow effect to CTA buttons. Ensure all transitions use 0.3s (duration-300) timing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Style CTA buttons with rounded pill design, brand color background, subtle hover scale effect, and optional clean icon",
+      "acceptanceCriteria": [
+        "CTA buttons have rounded pill shape (high border radius)",
+        "Buttons use existing brand colors as background",
+        "Buttons scale slightly on hover",
+        "Optional icons can be included in buttons when appropriate"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Style CTA buttons with rounded-full for pill shape, use existing brand color classes (bg-gradient-to-r from-primary to-accent or similar from Layout.tsx), add hover:scale-105 for subtle scale effect with transition-transform duration-300. Include optional icons from lucide-react (e.g., Calendar, ArrowRight) when semantically appropriate."
         }
       ]
     }

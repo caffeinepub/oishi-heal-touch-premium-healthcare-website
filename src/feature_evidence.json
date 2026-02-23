@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-an-animated-about-us-card-section-on-the-home-page-positioned-below-the-header-section-and-above-the-our-services-section",
-      "featureTitle": "Add an animated 'About Us' card section on the home page positioned below the header section and above the 'Our Services' section",
+      "featureId": "feature-restructure-the-services-section-on-the-homepage-with-a-centered-heading-our-services-followed-by-a-short-1-line-supporting-text-below-it",
+      "featureTitle": "Restructure the Services section on the homepage with a centered heading 'Our Services' followed by a short 1-line supporting text below it",
       "files": [
         "frontend/src/pages/HomePage.tsx"
       ],
@@ -16,6 +16,114 @@
       ],
       "testIds": [
         "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-existing-small-icon-boxes-with-large-premium-service-cards-where-each-card-displays-service-title-bold-prominent-2-3-line-meaningful-description-primary-cta-button-book-appointment-learn-more-optional-small-icon-above-title-and-proper-padding-and-spacing",
+      "featureTitle": "Replace existing small icon boxes with large premium service cards, where each card displays: service title (bold, prominent), 2-3 line meaningful description, primary CTA button (Book Appointment / Learn More), optional small icon above title, and proper padding and spacing",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-style-service-cards-with-rounded-corners-16-20px-border-radius-soft-shadow-depth-light-background-or-subtle-section-contrast-clean-premium-spacing-and-typography-hierarchy-with-large-bold-titles-softer-colored-descriptions-and-clearly-visible-ctas",
+      "featureTitle": "Style service cards with rounded corners (16-20px border radius), soft shadow depth, light background or subtle section contrast, clean premium spacing, and typography hierarchy with large bold titles, softer colored descriptions, and clearly visible CTAs",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-desktop-layout-with-2-service-cards-per-row-in-a-spacious-grid-with-equal-height-cards-and-add-hover-effects-including-slight-lift-shadow-increase-and-cta-button-highlight",
+      "featureTitle": "Implement desktop layout with 2 service cards per row in a spacious grid with equal height cards, and add hover effects including slight lift, shadow increase, and CTA button highlight",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-mobile-layout-with-single-column-stacked-cards-at-full-width-large-touch-friendly-cta-buttons-and-clean-vertical-spacing",
+      "featureTitle": "Implement mobile layout with single column stacked cards at full width, large touch-friendly CTA buttons, and clean vertical spacing",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-micro-interactions-including-smooth-scroll-reveal-animation-for-service-cards-hover-lift-animation-button-subtle-glow-effect-and-0-3s-smooth-transitions-throughout",
+      "featureTitle": "Add micro interactions including smooth scroll reveal animation for service cards, hover lift animation, button subtle glow effect, and 0.3s smooth transitions throughout",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-style-cta-buttons-with-rounded-pill-design-brand-color-background-subtle-hover-scale-effect-and-optional-clean-icon",
+      "featureTitle": "Style CTA buttons with rounded pill design, brand color background, subtle hover scale effect, and optional clean icon",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
       ],
       "confidence": "high"
     }

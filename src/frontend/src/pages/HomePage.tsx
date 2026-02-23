@@ -18,6 +18,9 @@ import {
   Baby,
   Eye,
   Sparkles,
+  Calendar,
+  ArrowRight,
+  Zap,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -41,23 +44,35 @@ export default function HomePage() {
     return () => observerRef.current?.disconnect();
   }, []);
 
-  const clinicServices = [
-    { name: 'Dermatology', icon: Activity },
-    { name: 'Orthopedic', icon: Activity },
-    { name: 'General Physician', icon: Stethoscope },
-    { name: 'ENT', icon: Eye },
-    { name: 'Gynecology', icon: Heart },
-    { name: 'Pediatrics', icon: Baby },
-    { name: 'Physiotherapy', icon: Activity },
-    { name: 'Ultrasound', icon: Microscope },
-    { name: 'IFT/TENS Therapy', icon: Activity },
-    { name: 'Traction Therapy', icon: Activity },
-  ];
-
-  const labServices = [
-    'Pathkind Lab Diagnostics',
-    'Full Body Checkup',
-    'Preventive Health Packages',
+  const premiumServices = [
+    {
+      icon: Stethoscope,
+      title: 'Multi-Specialty Consultations',
+      description: 'Expert care across Dermatology, Orthopedics, ENT, Gynecology, Pediatrics, and General Medicine. Our experienced specialists provide personalized treatment plans tailored to your unique health needs.',
+      cta: 'Book Appointment',
+      ctaLink: 'tel:9875539688',
+    },
+    {
+      icon: Activity,
+      title: 'Advanced Physiotherapy',
+      description: 'State-of-the-art physiotherapy services including IFT/TENS therapy, traction therapy, and rehabilitation programs. Our certified physiotherapists help you recover faster and regain mobility with evidence-based treatments.',
+      cta: 'Schedule Consultation',
+      ctaLink: 'tel:9875539688',
+    },
+    {
+      icon: Microscope,
+      title: 'Pathkind Lab Diagnostics',
+      description: 'Comprehensive diagnostic services with our trusted Pathkind Lab partnership. Get accurate test results for full body checkups, preventive health packages, and specialized tests—all with 10% OFF on full body checkups.',
+      cta: 'Explore Lab Tests',
+      ctaLink: '/lab-tests',
+    },
+    {
+      icon: Heart,
+      title: 'Ultrasound & Imaging',
+      description: 'Modern ultrasound and diagnostic imaging services for accurate diagnosis and monitoring. Our advanced equipment and skilled technicians ensure precise results for obstetric, abdominal, and musculoskeletal imaging.',
+      cta: 'Learn More',
+      ctaLink: 'tel:9875539688',
+    },
   ];
 
   const highlights = [
@@ -110,7 +125,7 @@ export default function HomePage() {
               Trusted Healthcare Partner in Kolkata
             </Badge>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
-              Premium, Compassionate Healthcare in Kolkata
+              Premium Healthcare in Beleghata
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
               Expert Specialists. Advanced Diagnostics. Trusted Pathkind Lab Partner.
@@ -139,7 +154,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white mobile-spacing-lg">
+      <section className="py-16 md:py-20 bg-[oklch(0.75_0.08_180)] mobile-spacing-lg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto observe-scroll">
             <Card className="card-premium relative shadow-large border-0 overflow-hidden">
@@ -175,67 +190,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white mobile-spacing-lg">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-slate-50 to-blue-50 mobile-spacing-lg">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 observe-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Comprehensive healthcare services under one roof
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Comprehensive healthcare solutions designed for your well-being
             </p>
           </div>
 
-          <div className="mb-16 observe-scroll">
-            <h3 className="text-3xl font-semibold text-foreground mb-10 text-center">Clinic Services</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {clinicServices.map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <Card key={index} className="card-premium relative shadow-soft hover:shadow-large border-0">
-                    <div className="card-border-glow"></div>
-                    <CardContent className="p-8 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-primary card-icon" />
-                      </div>
-                      <p className="text-base font-semibold text-foreground">{service.name}</p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="glass-effect rounded-3xl p-10 md:p-16 shadow-large observe-scroll">
-            <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-6 bg-primary text-primary-foreground px-6 py-2 rounded-full shadow-premium-sm">
-                Special Offer
-              </Badge>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Pathkind Lab Services
-              </h3>
-              <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-                10% OFF Full Body Checkup – Pathkind Partner
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 mb-10">
-                {labServices.map((service, index) => (
-                  <div key={index} className="flex items-center justify-center space-x-3 bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
-                    <span className="text-base font-medium text-foreground">{service}</span>
-                  </div>
-                ))}
-              </div>
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-premium-md hover:shadow-premium-lg hover:scale-105 transition-all duration-300 px-10 py-6 text-lg mobile-touch-target"
-              >
-                <Link to="/lab-tests">Explore Lab Tests</Link>
-              </Button>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
+            {premiumServices.map((service, index) => {
+              const Icon = service.icon;
+              const isExternalLink = service.ctaLink.startsWith('tel:');
+              
+              return (
+                <Card 
+                  key={index} 
+                  className="card-premium relative shadow-soft hover:shadow-premium border-0 transition-all duration-300 hover:-translate-y-2 observe-scroll group h-full"
+                >
+                  <div className="card-border-glow"></div>
+                  <CardContent className="p-8 md:p-10 flex flex-col h-full">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-6 shadow-soft group-hover:shadow-medium transition-all duration-300">
+                      <Icon className="w-7 h-7 text-primary card-icon" />
+                    </div>
+                    
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 flex-grow">
+                      {service.description}
+                    </p>
+                    
+                    {isExternalLink ? (
+                      <Button
+                        asChild
+                        size="lg"
+                        className="w-full rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-soft hover:shadow-premium-md hover:scale-105 transition-all duration-300 px-8 py-6 text-base md:text-lg mobile-touch-target group/btn"
+                      >
+                        <a href={service.ctaLink}>
+                          <Calendar className="w-5 h-5 mr-2 group-hover/btn:animate-icon-bounce" />
+                          {service.cta}
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button
+                        asChild
+                        size="lg"
+                        className="w-full rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-soft hover:shadow-premium-md hover:scale-105 transition-all duration-300 px-8 py-6 text-base md:text-lg mobile-touch-target group/btn"
+                      >
+                        <Link to={service.ctaLink}>
+                          <Zap className="w-5 h-5 mr-2 group-hover/btn:animate-icon-bounce" />
+                          {service.cta}
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                        </Link>
+                      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-gradient-to-br from-slate-50 to-blue-50 mobile-spacing-lg">
+      <section className="py-20 md:py-28 bg-white mobile-spacing-lg">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 observe-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Why Choose Us</h2>
@@ -263,7 +284,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white mobile-spacing-lg">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-slate-50 to-blue-50 mobile-spacing-lg">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 observe-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
