@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Premium healthcare website for Oishi Heal Touch clinic in Kolkata - mobile-first, conversion-focused with multi-page structure including home, doctors, services, lab tests, blog, and contact pages",
+  "architectural_notes": [
+    "Mobile-first responsive design with breakpoints for tablet and desktop",
+    "No AI-generated images - use clean layout blocks without fake imagery",
+    "WhatsApp API integration for contact form submissions",
+    "Semantic HTML5 with meta tags on each page for SEO",
+    "Lazy loading for images, target <2s load time",
+    "Light theme: white base, soft greys, medical blue/teal accent",
+    "Modern sans-serif typography (Inter or Poppins style)",
+    "Subtle animations: fade-in on scroll, soft hover elevation",
+    "Accessibility compliant (WCAG standards)",
+    "Target Lighthouse score 90+"
+  ],
+  "known_issues": [],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-remove-the-seo-keywords-text-block-seo-keywords-skin-care-clinic-kolkata-dermatologist-in-beleghata-orthopedic-clinic-kolkata-pathkind-lab-partner-kolkata-women-s-health-clinic-kolkata-that-appears-below-the-ready-to-book-your-appointment-section-on-the-home-page",
+      "title": "Remove the SEO keywords text block ('SEO Keywords: skin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata') that appears below the 'Ready to Book Your Appointment?' section on the home page",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with headline, subtext, and CTA",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Services overview with clinic and lab services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Key highlights section with 6 trust points",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Doctors page with 12 specialists in card grid",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "About page with mission, vision, and values",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Lab tests page with Pathkind partner info and accordion",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Why Us page with 7 key differentiators",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Testimonials page with 15 reviews and star ratings",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Contact page with form, WhatsApp integration, and Google Map",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Blog system with 6 categories and search",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Sticky mobile CTA button",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Oishi Heal Touch Premium Healthcare Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

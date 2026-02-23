@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-seo-keywords-text-block-seo-keywords-skin-care-clinic-kolkata-dermatologist-in-beleghata-orthopedic-clinic-kolkata-pathkind-lab-partner-kolkata-women-s-health-clinic-kolkata-that-appears-below-the-ready-to-book-your-appointment-section-on-the-home-page",
+      "featureTitle": "Remove the SEO keywords text block ('SEO Keywords: skin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata') that appears below the 'Ready to Book Your Appointment?' section on the home page",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

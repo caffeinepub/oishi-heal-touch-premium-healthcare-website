@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining all routes (home, doctors, about, lab tests, why us, testimonials, contact, blog) with Layout wrapper.",
+  "frontend/src/components/Layout.tsx": "Shared layout component with sticky header navigation, mobile menu sheet, footer with contact info and attribution, and fixed mobile CTA button.",
+  "frontend/src/pages/HomePage.tsx": "Home page with hero section, services overview (clinic and lab), key highlights, testimonials preview, and CTA sections. The SEO keywords section has been removed.",
+  "frontend/src/pages/DoctorsPage.tsx": "Doctors listing page displaying all 12 specialists in responsive card grid with specialty badges, schedules, fees, and booking CTAs.",
+  "frontend/src/pages/AboutPage.tsx": "About page with clinic introduction, story, mission/vision cards, and core values section highlighting compassion, excellence, integrity, and accessibility.",
+  "frontend/src/pages/LabTestsPage.tsx": "Lab tests page featuring Pathkind partnership, discount offers, accordion-based test categories, and partner benefits section.",
+  "frontend/src/pages/WhyUsPage.tsx": "Why choose us page with 7 detailed reason cards (Pathkind partner, verified doctors, specialist coverage, advanced therapies, affordable pricing, easy booking, clean facility) and statistics.",
+  "frontend/src/pages/TestimonialsPage.tsx": "Testimonials page displaying 15 patient reviews in responsive grid with star ratings and detailed feedback.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with WhatsApp-integrated contact form, location card with Google Maps link, phone/WhatsApp buttons, clinic hours, and embedded map.",
+  "frontend/src/pages/BlogPage.tsx": "Blog page with search functionality, category badges, and 9 health article cards with excerpts covering various medical topics.",
+  "frontend/src/index.css": "Global styles with OKLCH color system customized for healthcare theme (medical blue/teal primary, soft greys, white base) for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family, custom healthcare color palette, enhanced shadows, and fade-in animation for premium aesthetic."
+}

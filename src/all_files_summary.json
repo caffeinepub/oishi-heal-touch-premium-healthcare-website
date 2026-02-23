@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend canister entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report documenting the removal of SEO keywords text block from HomePage.tsx with high confidence.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend files including pages, components, and configuration with descriptions of their functionality.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH color system defining CSS custom properties for light and dark themes with grayscale palette.",
+  "frontend/index.html": "HTML entry point with root div and module script reference for the React application titled 'Oishi Heal Touch Premium Healthcare Website'.",
+  "frontend/src/App.tsx": "TanStack Router configuration defining all application routes (home, doctors, about, lab tests, why us, testimonials, contact, blog) with Layout wrapper.",
+  "frontend/src/components/Layout.tsx": "Shared layout component with sticky header navigation, mobile menu sheet, footer with contact info, and fixed mobile CTA button for calling.",
+  "frontend/src/hooks/useActor.ts": "React hook managing backend actor creation with Internet Identity authentication, handling anonymous and authenticated states with query invalidation.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context and hook for Internet Identity authentication providing login, logout, identity state management, and AuthClient configuration.",
+  "frontend/src/index.css": "Tailwind CSS with OKLCH color system defining healthcare-themed color palette (medical blue/teal primary) for light and dark modes with custom properties.",
+  "frontend/src/main.tsx": "React application entry point wrapping App with QueryClientProvider and InternetIdentityProvider for state management and authentication.",
+  "frontend/src/pages/AboutPage.tsx": "Displays the About page with clinic introduction, story, mission/vision cards, and value propositions using gradient hero section and card components with icons.",
+  "frontend/src/pages/BlogPage.tsx": "Renders a blog listing page with search functionality, category filters, and an array of health-related blog posts with titles, excerpts, dates, and categories.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with a form that submits to WhatsApp, displaying clinic location, hours, phone, and email information in card layouts.",
+  "frontend/src/pages/DoctorsPage.tsx": "Lists all doctors with their specialties, schedules, and consultation fees in a grid of cards with color-coded specialty badges and appointment booking buttons.",
+  "frontend/src/pages/HomePage.tsx": "Main landing page featuring hero section, clinic/lab services, highlights with icons, testimonials, and call-to-action buttons for appointments and doctor listings.",
+  "frontend/src/pages/LabTestsPage.tsx": "Lab tests page displaying Pathkind partnership, test categories (Full Body Checkup, Diabetes, Cardiac, Thyroid, Women's Health, Preventive packages) in accordion format, special offers (10% discount), and features like home sample collection with call-to-action buttons.",
+  "frontend/src/pages/TestimonialsPage.tsx": "Testimonials page showing 15 patient reviews in a responsive card grid, each with 5-star ratings, patient names, and detailed feedback about doctors, services, and clinic facilities.",
+  "frontend/src/pages/WhyUsPage.tsx": "Why Us page highlighting 7 key differentiators (Pathkind partnership, verified doctors, specialist coverage, advanced therapies, affordable pricing, easy booking, clean facility) with icons and detailed descriptions in card layout.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration with custom theme extending colors (using OKLCH color space), typography (Inter font), border radius variables, box shadows, and animation keyframes for accordion and other UI components.",
+  "project_state.json": "Project state tracking document defining the Oishi Heal Touch healthcare website architecture, mobile-first design principles, SEO requirements, accessibility standards, existing features, and 12 pending feature requests including hero section, services, doctors page, blog system, and contact form."
+}

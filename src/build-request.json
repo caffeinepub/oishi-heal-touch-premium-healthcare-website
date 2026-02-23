@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Remove SEO keywords text from home page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Remove the SEO keywords text block ('SEO Keywords: skin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata') that appears below the 'Ready to Book Your Appointment?' section on the home page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "in the home page, just below the \"Ready to Book Your Appointment?\" section, remove the unneccessary  text: \"SEO Keywords:\n\nskin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The SEO keywords text block is completely removed from frontend/src/pages/HomePage.tsx",
+        "The section layout remains intact without visual gaps or layout shifts",
+        "No other content on the home page is affected by this change"
+      ]
+    }
+  ],
+  "constraints": [
+    "Only modify the home page component (frontend/src/pages/HomePage.tsx)",
+    "Do not alter any other sections or components on the home page"
+  ],
+  "nonGoals": [
+    "Modifying SEO metadata in the HTML head",
+    "Adding alternative SEO optimization methods",
+    "Changing any other page content or styling"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

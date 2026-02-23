@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove SEO keywords text from home page",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Remove the SEO keywords text block that appears below the 'Ready to Book Your Appointment?' section on the home page",
+      "acceptanceCriteria": [
+        "The SEO keywords text block is completely removed from frontend/src/pages/HomePage.tsx",
+        "The section layout remains intact without visual gaps or layout shifts",
+        "No other content on the home page is affected by this change"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Remove the SEO keywords text block ('SEO Keywords: skin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata') that appears below the 'Ready to Book Your Appointment?' section. Locate the text element containing this content and remove it entirely while preserving the surrounding layout structure."
+        }
+      ]
+    }
+  ]
+}
