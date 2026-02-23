@@ -32,20 +32,18 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col">
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white'
+          isScrolled ? 'glass-effect-strong shadow-soft' : 'bg-white/95'
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex h-16 md:h-20 items-center justify-between">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-primary to-accent">
-                <Heart className="w-5 h-5 md:w-6 md:h-6 text-white fill-white" />
+          <div className="flex items-center justify-between h-20">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-premium-sm group-hover:shadow-premium-md transition-all duration-300">
+                <Heart className="w-6 h-6 text-white" />
               </div>
-              <div className="flex flex-col">
-                <span className="text-lg md:text-xl font-bold text-foreground leading-tight">
-                  Oishi Heal Touch
-                </span>
-                <span className="text-xs text-muted-foreground hidden sm:block">Premium Healthcare</span>
+              <div>
+                <h1 className="text-xl font-bold text-foreground tracking-tight">Oishi Heal Touch</h1>
+                <p className="text-xs text-muted-foreground">Premium Healthcare</p>
               </div>
             </Link>
 
@@ -54,10 +52,10 @@ export default function Layout() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     location.pathname === link.href
-                      ? 'text-primary bg-primary/10'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
+                      ? 'bg-primary text-primary-foreground shadow-premium-sm'
+                      : 'text-foreground hover:bg-secondary hover:text-secondary-foreground'
                   }`}
                 >
                   {link.label}
@@ -65,40 +63,54 @@ export default function Layout() {
               ))}
             </nav>
 
-            <div className="flex items-center space-x-2">
-              <Button asChild className="hidden md:flex" size="default">
+            <div className="hidden lg:flex items-center space-x-3">
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-premium-sm hover:shadow-premium-md hover:scale-105 transition-all duration-300"
+              >
                 <a href="tel:9875539688">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </a>
               </Button>
-
-              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="lg:hidden">
-                    {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-[280px] sm:w-[320px]">
-                  <nav className="flex flex-col space-y-1 mt-8">
-                    {navLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        to={link.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={`px-4 py-3 text-base font-medium rounded-lg transition-colors ${
-                          location.pathname === link.href
-                            ? 'text-primary bg-primary/10'
-                            : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </nav>
-                </SheetContent>
-              </Sheet>
             </div>
+
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild className="lg:hidden">
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <nav className="flex flex-col space-y-2 mt-8">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${
+                        location.pathname === link.href
+                          ? 'bg-primary text-primary-foreground shadow-soft'
+                          : 'text-foreground hover:bg-secondary'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  <Button
+                    asChild
+                    size="lg"
+                    className="mt-4 rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-premium-sm mobile-touch-target"
+                  >
+                    <a href="tel:9875539688">
+                      <Phone className="w-5 h-5 mr-2" />
+                      Call: 98755 39688
+                    </a>
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </header>
@@ -107,67 +119,57 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="bg-gradient-to-br from-slate-50 to-slate-100 border-t mt-16">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <footer className="bg-gradient-to-br from-slate-50 to-blue-50 border-t border-border mt-auto">
+        <div className="container mx-auto px-4 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent">
-                  <Heart className="w-5 h-5 text-white fill-white" />
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-premium-sm">
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-lg font-bold text-foreground">Oishi Heal Touch</span>
+                <div>
+                  <h3 className="text-lg font-bold text-foreground">Oishi Heal Touch</h3>
+                  <p className="text-xs text-muted-foreground">Premium Healthcare</p>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Premium, compassionate healthcare in Kolkata. Trusted Pathkind Lab Partner.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Your trusted healthcare partner in Kolkata, providing compassionate and expert medical care.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+              <h4 className="text-sm font-bold text-foreground mb-4 tracking-wide">Quick Links</h4>
               <ul className="space-y-2">
-                <li>
-                  <Link to="/doctors" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Our Doctors
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/lab-tests" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Lab Tests
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/why-us" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Why Choose Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Health Blog
-                  </Link>
-                </li>
+                {navLinks.slice(0, 4).map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      to={link.href}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li className="text-sm text-muted-foreground">Dermatology</li>
-                <li className="text-sm text-muted-foreground">Orthopedic</li>
-                <li className="text-sm text-muted-foreground">General Physician</li>
-                <li className="text-sm text-muted-foreground">Gynecology</li>
+              <h4 className="text-sm font-bold text-foreground mb-4 tracking-wide">Services</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>Specialist Consultations</li>
+                <li>Lab Diagnostics</li>
+                <li>Physiotherapy</li>
+                <li>Health Checkups</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Contact</h3>
-              <ul className="space-y-2">
-                <li className="text-sm text-muted-foreground">
-                  CIT More, Kalimuddin Sarkar Lane
-                  <br />
-                  Beleghata, Kolkata – 700010
-                </li>
+              <h4 className="text-sm font-bold text-foreground mb-4 tracking-wide">Contact</h4>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li>CIT More, Kalimuddin Sarkar Lane</li>
+                <li>Beleghata, Kolkata – 700010</li>
                 <li>
-                  <a href="tel:9875539688" className="text-sm text-primary hover:underline">
+                  <a href="tel:9875539688" className="hover:text-primary transition-colors duration-200">
                     +91 98755 39688
                   </a>
                 </li>
@@ -175,17 +177,19 @@ export default function Layout() {
             </div>
           </div>
 
-          <div className="border-t mt-8 pt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Oishi Heal Touch. All rights reserved. Built with{' '}
-              <Heart className="inline w-3 h-3 text-red-500 fill-red-500" /> using{' '}
+          <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground text-center md:text-left">
+              © {new Date().getFullYear()} Oishi Heal Touch. All rights reserved.
+            </p>
+            <p className="text-sm text-muted-foreground flex items-center gap-1">
+              Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> using{' '}
               <a
                 href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(
                   typeof window !== 'undefined' ? window.location.hostname : 'oishi-heal-touch'
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="font-medium text-primary hover:underline transition-all duration-200"
               >
                 caffeine.ai
               </a>
@@ -194,11 +198,15 @@ export default function Layout() {
         </div>
       </footer>
 
-      <div className="fixed bottom-4 right-4 z-40 md:hidden">
-        <Button asChild size="lg" className="rounded-full shadow-lg">
+      <div className="lg:hidden mobile-sticky-cta">
+        <Button
+          asChild
+          size="lg"
+          className="w-full rounded-full bg-gradient-to-r from-primary to-accent text-white shadow-premium-md hover:shadow-premium-lg hover:scale-[1.02] transition-all duration-300 mobile-touch-target"
+        >
           <a href="tel:9875539688">
             <Phone className="w-5 h-5 mr-2" />
-            Call Now
+            Call: 98755 39688
           </a>
         </Button>
       </div>

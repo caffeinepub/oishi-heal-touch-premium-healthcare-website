@@ -2,10 +2,20 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-seo-keywords-text-block-seo-keywords-skin-care-clinic-kolkata-dermatologist-in-beleghata-orthopedic-clinic-kolkata-pathkind-lab-partner-kolkata-women-s-health-clinic-kolkata-that-appears-below-the-ready-to-book-your-appointment-section-on-the-home-page",
-      "featureTitle": "Remove the SEO keywords text block ('SEO Keywords: skin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata') that appears below the 'Ready to Book Your Appointment?' section on the home page",
+      "featureId": "feature-apply-premium-visual-styling-across-all-pages-add-soft-glassmorphism-effects-to-key-sections-use-smooth-gradient-overlays-using-existing-brand-colors-medical-blue-teal-add-depth-with-soft-shadows-box-shadow-with-blur-20-40px-not-harsh-increase-white-space-for-luxury-feel-improve-section-separation-with-subtle-background-variations-and-add-elegant-border-radius-12px-20px-to-cards-and-containers",
+      "featureTitle": "Apply premium visual styling across all pages: add soft glassmorphism effects to key sections, use smooth gradient overlays using existing brand colors (medical blue/teal), add depth with soft shadows (box-shadow with blur 20-40px, not harsh), increase white space for luxury feel, improve section separation with subtle background variations, and add elegant border radius (12px-20px to cards and containers)",
       "files": [
-        "frontend/src/pages/HomePage.tsx"
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DoctorsPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/LabTestsPage.tsx",
+        "frontend/src/pages/TestimonialsPage.tsx",
+        "frontend/src/pages/WhyUsPage.tsx",
+        "frontend/tailwind.config.js"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,6 +26,158 @@
       ],
       "testIds": [
         "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-upgrade-typography-system-use-inter-or-poppins-style-bold-geometric-sans-serif-for-headings-clean-minimal-sans-serif-for-body-text-increase-hero-heading-size-significantly-use-softer-subtext-colors-reduce-opacity-or-use-muted-variants-improve-line-height-for-readability-and-add-slight-letter-spacing-0-02em-0-05em-for-premium-feel",
+      "featureTitle": "Upgrade typography system: use Inter or Poppins-style bold geometric sans-serif for headings, clean minimal sans-serif for body text, increase hero heading size significantly, use softer subtext colors (reduce opacity or use muted variants), improve line-height for readability, and add slight letter spacing (0.02em-0.05em) for premium feel",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DoctorsPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/LabTestsPage.tsx",
+        "frontend/src/pages/TestimonialsPage.tsx",
+        "frontend/src/pages/WhyUsPage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-enhance-hero-section-on-homepage-add-subtle-background-gradient-blur-effect-add-soft-floating-shapes-minimal-elegant-using-css-implement-smooth-fade-in-animation-on-page-load-upgrade-cta-buttons-to-rounded-pill-style-with-soft-gradient-background-using-brand-colors-and-add-subtle-hover-animation-scale-1-05-with-glow-effect",
+      "featureTitle": "Enhance hero section on HomePage: add subtle background gradient blur effect, add soft floating shapes (minimal, elegant, using CSS), implement smooth fade-in animation on page load, upgrade CTA buttons to rounded pill style with soft gradient background using brand colors, and add subtle hover animation (scale 1.05 with glow effect)",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-enhance-service-cards-across-all-pages-maintain-existing-grid-layout-but-add-hover-lift-effect-translatey-8px-to-12px-add-soft-shadow-depth-that-increases-on-hover-implement-animated-icon-hover-with-micro-movement-scale-or-rotate-add-subtle-gradient-border-glow-on-hover-add-smooth-transition-animation-0-3s-ease-in-out-and-style-cards-to-feel-like-premium-saas-design",
+      "featureTitle": "Enhance service cards across all pages: maintain existing grid layout but add hover lift effect (translateY -8px to -12px), add soft shadow depth that increases on hover, implement animated icon hover with micro movement (scale or rotate), add subtle gradient border glow on hover, add smooth transition animation (0.3s ease-in-out), and style cards to feel like premium SaaS design",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/DoctorsPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/LabTestsPage.tsx",
+        "frontend/src/pages/TestimonialsPage.tsx",
+        "frontend/src/pages/WhyUsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-redesign-all-primary-action-buttons-book-appointment-call-now-view-doctors-across-all-pages-convert-to-rounded-pill-style-add-soft-shadow-apply-gradient-background-using-brand-colors-implement-hover-glow-effect-and-add-subtle-click-animation-scale-down-slightly-on-active-state",
+      "featureTitle": "Redesign all primary action buttons (Book Appointment, Call Now, View Doctors) across all pages: convert to rounded pill style, add soft shadow, apply gradient background using brand colors, implement hover glow effect, and add subtle click animation (scale down slightly on active state)",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DoctorsPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/LabTestsPage.tsx",
+        "frontend/src/pages/WhyUsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-upgrade-mobile-experience-improve-spacing-between-elements-with-increased-padding-and-margins-make-all-buttons-larger-and-touch-friendly-minimum-48px-height-add-sticky-bottom-cta-with-glassmorphism-effect-that-remains-visible-during-scroll-and-implement-smooth-scroll-reveal-animations-for-content-sections",
+      "featureTitle": "Upgrade mobile experience: improve spacing between elements with increased padding and margins, make all buttons larger and touch-friendly (minimum 48px height), add sticky bottom CTA with glassmorphism effect that remains visible during scroll, and implement smooth scroll reveal animations for content sections",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DoctorsPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/LabTestsPage.tsx",
+        "frontend/src/pages/TestimonialsPage.tsx",
+        "frontend/src/pages/WhyUsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-elegant-micro-interactions-throughout-the-site-add-smooth-scroll-reveal-animations-for-sections-appearing-as-user-scrolls-add-hover-transitions-to-interactive-elements-implement-button-ripple-or-glow-effect-on-interaction-add-subtle-icon-animations-rotate-scale-or-bounce-on-hover-and-ensure-all-animations-are-elegant-and-performant-without-being-flashy",
+      "featureTitle": "Implement elegant micro-interactions throughout the site: add smooth scroll reveal animations for sections appearing as user scrolls, add hover transitions to interactive elements, implement button ripple or glow effect on interaction, add subtle icon animations (rotate, scale, or bounce on hover), and ensure all animations are elegant and performant without being flashy",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/BlogPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/DoctorsPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/LabTestsPage.tsx",
+        "frontend/src/pages/TestimonialsPage.tsx",
+        "frontend/src/pages/WhyUsPage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
       ],
       "confidence": "high"
     }

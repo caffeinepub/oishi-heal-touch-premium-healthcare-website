@@ -1,35 +1,184 @@
 {
   "kind": "build_request",
-  "title": "Remove SEO keywords text from home page",
+  "title": "Premium UI/UX visual redesign for Oishi Heal Touch healthcare website",
+  "projectName": "Oishi Heal Touch",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove the SEO keywords text block ('SEO Keywords: skin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata') that appears below the 'Ready to Book Your Appointment?' section on the home page",
+      "text": "Apply premium visual styling across all pages: add soft glassmorphism effects to key sections, use smooth gradient overlays using existing brand colors (medical blue/teal), add depth with soft shadows (box-shadow with blur 20-40px, not harsh), increase white space for luxury feel, improve section separation with subtle background variations, and add elegant border radius (12px-20px to cards and containers)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-latest"
         ],
         "quotes": [
-          "in the home page, just below the \"Ready to Book Your Appointment?\" section, remove the unneccessary  text: \"SEO Keywords:\n\nskin care clinic Kolkata • Dermatologist in Beleghata • Orthopedic clinic Kolkata • Pathkind lab partner Kolkata • Women's health clinic Kolkata\""
+          "Add soft glassmorphism or subtle layered backgrounds",
+          "Use smooth gradient overlays using existing brand colors",
+          "Add depth with soft shadows (not harsh)",
+          "Increase white space for luxury feel"
         ]
       },
       "acceptanceCriteria": [
-        "The SEO keywords text block is completely removed from frontend/src/pages/HomePage.tsx",
-        "The section layout remains intact without visual gaps or layout shifts",
-        "No other content on the home page is affected by this change"
+        "All page sections have increased padding and margin for breathing room",
+        "Cards and containers use 12px-20px border radius",
+        "Soft shadows are applied with blur values between 20-40px",
+        "Gradient overlays use only existing brand colors from the OKLCH color palette",
+        "Glassmorphism effects (backdrop-blur) are applied to hero sections and featured cards"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Upgrade typography system: use Inter or Poppins-style bold geometric sans-serif for headings, clean minimal sans-serif for body text, increase hero heading size significantly, use softer subtext colors (reduce opacity or use muted variants), improve line-height for readability, and add slight letter spacing (0.02em-0.05em) for premium feel",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Use modern premium font pairing: Heading: Bold geometric sans-serif (like Inter / Poppins style)",
+          "Bigger hero heading",
+          "Softer subtext color",
+          "Better line-height",
+          "Add slight letter spacing for premium feel"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero headings are at least 25% larger than current size",
+        "All headings use bold weight (700 or higher) with geometric sans-serif font",
+        "Body text has line-height of 1.6 or higher",
+        "Subtext colors use muted variants or reduced opacity",
+        "Headings have letter-spacing between 0.02em and 0.05em"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Enhance hero section on HomePage: add subtle background gradient blur effect, add soft floating shapes (minimal, elegant, using CSS), implement smooth fade-in animation on page load, upgrade CTA buttons to rounded pill style with soft gradient background using brand colors, and add subtle hover animation (scale 1.05 with glow effect)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add subtle background gradient blur",
+          "Add soft floating shapes (very minimal, elegant)",
+          "Add smooth fade-in animation",
+          "Make CTA button more premium: Rounded pill style, Soft gradient background, Subtle hover animation (scale 1.05 + glow)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section background has gradient with blur effect applied",
+        "2-3 floating decorative shapes are positioned using CSS (absolute/fixed) with subtle animation",
+        "Hero content fades in smoothly on page load (0.6-1s duration)",
+        "CTA buttons use rounded pill style (border-radius 9999px or equivalent)",
+        "CTA buttons have gradient background from brand color palette",
+        "CTA buttons scale to 1.05 and show glow effect on hover"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Enhance service cards across all pages: maintain existing grid layout but add hover lift effect (translateY -8px to -12px), add soft shadow depth that increases on hover, implement animated icon hover with micro movement (scale or rotate), add subtle gradient border glow on hover, add smooth transition animation (0.3s ease-in-out), and style cards to feel like premium SaaS design",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Keep same grid layout but: Add hover lift effect, Add soft shadow depth, Add animated icon hover (micro movement), Add subtle gradient border glow on hover, Add smooth transition animation (0.3s ease-in-out)",
+          "Make cards feel like premium SaaS design"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Service cards lift up 8-12px on hover using translateY",
+        "Card shadow increases in size and intensity on hover",
+        "Icons within cards scale or rotate slightly on card hover",
+        "Cards show gradient border glow on hover using brand colors",
+        "All card transitions use 0.3s ease-in-out timing",
+        "Grid layout structure remains unchanged"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Redesign all primary action buttons (Book Appointment, Call Now, View Doctors) across all pages: convert to rounded pill style, add soft shadow, apply gradient background using brand colors, implement hover glow effect, and add subtle click animation (scale down slightly on active state)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "For: Book Appointment, Call Now, View Doctors. Upgrade to: Rounded pill style, Soft shadow, Gradient background using brand colors, Hover glow effect, Subtle click animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All Book Appointment buttons use pill style with full rounded corners",
+        "All Call Now buttons use pill style with full rounded corners",
+        "All View Doctors buttons use pill style with full rounded corners",
+        "Buttons have soft drop shadow applied",
+        "Button backgrounds use gradient from brand color palette",
+        "Buttons show glow effect on hover (box-shadow with color)",
+        "Buttons scale down slightly (0.95-0.98) on active/click state"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Upgrade mobile experience: improve spacing between elements with increased padding and margins, make all buttons larger and touch-friendly (minimum 48px height), add sticky bottom CTA with glassmorphism effect that remains visible during scroll, and implement smooth scroll reveal animations for content sections",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Since most traffic is mobile: Improve spacing between elements, Larger touch-friendly buttons, Sticky bottom CTA with glass effect, Smooth scroll animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Mobile spacing increased by at least 25% between sections",
+        "All interactive buttons have minimum 48px height on mobile viewports",
+        "Sticky bottom CTA bar is implemented with backdrop-blur glassmorphism",
+        "Sticky CTA remains fixed at bottom during scroll on mobile",
+        "Content sections animate in smoothly as user scrolls down"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement elegant micro-interactions throughout the site: add smooth scroll reveal animations for sections appearing as user scrolls, add hover transitions to interactive elements, implement button ripple or glow effect on interaction, add subtle icon animations (rotate, scale, or bounce on hover), and ensure all animations are elegant and performant without being flashy",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add: Smooth scroll reveal animations, Hover transitions, Button ripple or glow effect, Subtle icon animation",
+          "Keep animations elegant and not flashy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sections fade in or slide up as they enter viewport during scroll",
+        "All interactive elements (links, cards, buttons) have smooth hover transitions",
+        "Buttons show ripple or expanding glow effect when clicked",
+        "Icons show subtle animation on hover (scale, rotate, or bounce)",
+        "All animations use CSS transitions or keyframes (no heavy libraries)",
+        "Animation durations are between 0.2s and 0.6s for subtlety"
       ]
     }
   ],
   "constraints": [
-    "Only modify the home page component (frontend/src/pages/HomePage.tsx)",
-    "Do not alter any other sections or components on the home page"
+    "Do not change the layout structure or section arrangement",
+    "Do not modify the existing brand color palette (medical blue/teal from OKLCH system)",
+    "Do not rearrange content sections or change their order",
+    "Do not add or generate AI photos or images",
+    "Do not use heavy animation libraries - keep animations lightweight with CSS",
+    "Maintain mobile-first responsive design approach",
+    "Keep code optimized for performance and speed"
   ],
   "nonGoals": [
-    "Modifying SEO metadata in the HTML head",
-    "Adding alternative SEO optimization methods",
-    "Changing any other page content or styling"
+    "Adding new content sections or pages",
+    "Changing brand colors or introducing new color schemes",
+    "Restructuring navigation or information architecture",
+    "Adding external image assets or AI-generated photos",
+    "Implementing complex JavaScript animation libraries",
+    "Modifying backend functionality",
+    "Changing the order or hierarchy of page sections"
   ],
   "imageRequirements": {
     "required": [],

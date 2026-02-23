@@ -1,14 +1,14 @@
 {
   "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining all routes (home, doctors, about, lab tests, why us, testimonials, contact, blog) with Layout wrapper.",
-  "frontend/src/components/Layout.tsx": "Shared layout component with sticky header navigation, mobile menu sheet, footer with contact info and attribution, and fixed mobile CTA button.",
-  "frontend/src/pages/HomePage.tsx": "Home page with hero section, services overview (clinic and lab), key highlights, testimonials preview, and CTA sections. The SEO keywords section has been removed.",
-  "frontend/src/pages/DoctorsPage.tsx": "Doctors listing page displaying all 12 specialists in responsive card grid with specialty badges, schedules, fees, and booking CTAs.",
-  "frontend/src/pages/AboutPage.tsx": "About page with clinic introduction, story, mission/vision cards, and core values section highlighting compassion, excellence, integrity, and accessibility.",
-  "frontend/src/pages/LabTestsPage.tsx": "Lab tests page featuring Pathkind partnership, discount offers, accordion-based test categories, and partner benefits section.",
-  "frontend/src/pages/WhyUsPage.tsx": "Why choose us page with 7 detailed reason cards (Pathkind partner, verified doctors, specialist coverage, advanced therapies, affordable pricing, easy booking, clean facility) and statistics.",
-  "frontend/src/pages/TestimonialsPage.tsx": "Testimonials page displaying 15 patient reviews in responsive grid with star ratings and detailed feedback.",
-  "frontend/src/pages/ContactPage.tsx": "Contact page with WhatsApp-integrated contact form, location card with Google Maps link, phone/WhatsApp buttons, clinic hours, and embedded map.",
-  "frontend/src/pages/BlogPage.tsx": "Blog page with search functionality, category badges, and 9 health article cards with excerpts covering various medical topics.",
-  "frontend/src/index.css": "Global styles with OKLCH color system customized for healthcare theme (medical blue/teal primary, soft greys, white base) for both light and dark modes.",
-  "frontend/tailwind.config.js": "Tailwind configuration with Inter font family, custom healthcare color palette, enhanced shadows, and fade-in animation for premium aesthetic."
+  "frontend/src/components/Layout.tsx": "Shared layout with glassmorphism header, premium gradient logo, rounded pill navigation, sticky mobile CTA with glass effect, and footer with brand attribution and dynamic year.",
+  "frontend/src/pages/HomePage.tsx": "Home page with animated hero section featuring floating shapes, gradient pill CTAs, premium service cards with hover lift and gradient border glow, glassmorphism lab services section, scroll reveal animations, and enhanced mobile spacing.",
+  "frontend/src/pages/DoctorsPage.tsx": "Doctors listing page with premium card design, hover lift effects, gradient border glow, rounded pill booking buttons, scroll reveal animations, and enhanced mobile touch targets.",
+  "frontend/src/pages/AboutPage.tsx": "About page with premium mission/vision cards featuring gradient icon backgrounds, hover lift effects, gradient border glow, scroll reveal animations, and enhanced typography with increased spacing.",
+  "frontend/src/pages/LabTestsPage.tsx": "Lab tests page with premium offer cards, accordion with rounded design and hover effects, gradient pill CTAs, scroll reveal animations, and enhanced mobile spacing with touch-friendly buttons.",
+  "frontend/src/pages/WhyUsPage.tsx": "Why choose us page with premium reason cards featuring gradient icon backgrounds, hover lift effects, gradient border glow, statistics cards, scroll reveal animations, and enhanced typography.",
+  "frontend/src/pages/TestimonialsPage.tsx": "Testimonials page with premium testimonial cards featuring hover lift effects, gradient border glow, scroll reveal animations, and enhanced mobile spacing.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with premium form design, rounded inputs, gradient pill submit button, info cards with gradient icon backgrounds, hover effects, and enhanced mobile touch targets.",
+  "frontend/src/pages/BlogPage.tsx": "Blog page with premium search bar, category badges with hover effects, blog post cards with hover lift and gradient border glow, scroll reveal animations, and enhanced mobile spacing.",
+  "frontend/src/index.css": "Global styles with OKLCH color system, premium glassmorphism effects, pill button styles, card hover animations with gradient border glow, scroll reveal animations, floating shapes, mobile-specific enhancements, and smooth transitions for all interactive elements.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Inter font, extended border radius (xl, 2xl, 3xl), premium shadow utilities (soft, medium, large, glow effects), custom spacing, and comprehensive keyframe animations for fade-in, slide-up, float, icon-bounce, and glow-pulse effects."
 }

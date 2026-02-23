@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -7,6 +7,25 @@ import { Search, Calendar, ArrowRight } from 'lucide-react';
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-reveal');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.observe-scroll');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => observerRef.current?.disconnect();
+  }, []);
 
   const categories = [
     'Skin Care Tips',
@@ -92,19 +111,19 @@ export default function BlogPage() {
 
   return (
     <div className="w-full">
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:py-16">
+      <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-16 md:py-24 mobile-spacing-lg">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Health Blog</h1>
-            <p className="text-lg text-muted-foreground mb-8">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in-hero">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Health Blog</h1>
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
               Expert health advice, tips, and insights from our medical professionals
             </p>
-            <div className="relative max-w-xl mx-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <div className="relative max-w-2xl mx-auto">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-muted-foreground" />
               <Input
                 type="text"
                 placeholder="Search articles..."
-                className="pl-10 h-12"
+                className="pl-14 h-14 rounded-full shadow-soft text-base"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -113,38 +132,47 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
+      <section className="py-16 md:py-24 mobile-spacing-lg">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Categories</h2>
-              <div className="flex flex-wrap gap-2">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12 observe-scroll">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Categories</h2>
+              <div className="flex flex-wrap gap-3">
                 {categories.map((category, index) => (
-                  <Badge key={index} variant="secondary" className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-6 py-2 rounded-full text-base"
+                  >
                     {category}
                   </Badge>
                 ))}
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow flex flex-col">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="outline">{post.category}</Badge>
-                      <div className="flex items-center text-xs text-muted-foreground">
-                        <Calendar className="w-3 h-3 mr-1" />
+                <Card key={index} className="card-premium relative shadow-soft hover:shadow-large border-0 flex flex-col observe-scroll">
+                  <div className="card-border-glow"></div>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge variant="outline" className="rounded-full px-4 py-1">{post.category}</Badge>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar className="w-4 h-4 mr-1" />
                         {post.date}
                       </div>
                     </div>
-                    <CardTitle className="text-xl leading-tight">{post.title}</CardTitle>
+                    <CardTitle className="text-2xl leading-tight">{post.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col">
-                    <p className="text-sm text-muted-foreground mb-4 flex-1">{post.excerpt}</p>
-                    <Button variant="ghost" className="w-full justify-between group">
+                    <p className="text-base text-muted-foreground mb-6 flex-1 leading-relaxed">{post.excerpt}</p>
+                    <Button
+                      variant="ghost"
+                      className="w-full justify-between group rounded-full hover:bg-secondary transition-all duration-300"
+                      size="lg"
+                    >
                       Read More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -152,20 +180,20 @@ export default function BlogPage() {
             </div>
 
             {filteredPosts.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-lg text-muted-foreground">No articles found matching your search.</p>
+              <div className="text-center py-16">
+                <p className="text-xl text-muted-foreground">No articles found matching your search.</p>
               </div>
             )}
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-slate-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 mobile-spacing">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 observe-scroll">
             Stay Updated with Health Tips
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed observe-scroll">
             Follow our blog for regular updates on health, wellness, and medical advice from our expert doctors
           </p>
         </div>

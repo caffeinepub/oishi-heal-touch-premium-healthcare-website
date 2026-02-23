@@ -1,7 +1,28 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 export default function TestimonialsPage() {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-reveal');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.observe-scroll');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => observerRef.current?.disconnect();
+  }, []);
+
   const testimonials = [
     {
       name: 'Priya Sharma',
@@ -82,32 +103,33 @@ export default function TestimonialsPage() {
 
   return (
     <div className="w-full">
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-12 md:py-16">
+      <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-16 md:py-24 mobile-spacing-lg">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Patient Testimonials</h1>
-            <p className="text-lg text-muted-foreground">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in-hero">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Patient Testimonials</h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Read what our patients have to say about their experience with us
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
+      <section className="py-16 md:py-24 mobile-spacing-lg">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-1 mb-3">
+              <Card key={index} className="card-premium relative shadow-soft hover:shadow-large border-0 observe-scroll">
+                <div className="card-border-glow"></div>
+                <CardHeader className="pb-4">
+                  <div className="flex items-center space-x-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                     ))}
                   </div>
-                  <CardTitle className="text-lg">{testimonial.name}</CardTitle>
+                  <CardTitle className="text-xl">{testimonial.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">{testimonial.text}</p>
+                  <p className="text-muted-foreground leading-relaxed text-base">{testimonial.text}</p>
                 </CardContent>
               </Card>
             ))}
@@ -115,12 +137,12 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-slate-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 mobile-spacing">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 observe-scroll">
             Join Our Happy Patients
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed observe-scroll">
             Experience the same quality care and compassionate treatment that our patients rave about
           </p>
         </div>
